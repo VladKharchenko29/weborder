@@ -21,6 +21,6 @@ public class BaseTest {
 
     @AfterTest
     public void teardown() throws IOException {
-//        setup.DriverManager.closeWebDriver();
+        setup.DriverManager.closeWebDriver();
     }
 }

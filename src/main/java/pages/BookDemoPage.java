@@ -1,6 +1,8 @@
 package pages;
 
 import com.github.javafaker.Faker;
+import io.qameta.allure.Step;
+import org.assertj.core.api.Assertions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
@@ -39,6 +41,7 @@ public class BookDemoPage extends MainPage {
     String phoneString = String.valueOf(faker.number().randomNumber(9, true));
     String aboutUsString = faker.starTrek().specie();
 
+    @Step("Entering data into fields")
     public void enterData() {
         DriverManager.getWebDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         firsName.sendKeys(firstNameString);
@@ -51,7 +54,7 @@ public class BookDemoPage extends MainPage {
         select.selectByIndex(2);
 
         aboutUs.sendKeys(aboutUsString);
-        submitBtn.click();
+//        submitBtn.click();
     }
 
 }

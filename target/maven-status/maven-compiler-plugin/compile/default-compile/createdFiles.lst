@@ -1,0 +1,10 @@
+base\BasePage.class
+base\BaseTest.class
+nav\URL.class
+Listeners\TestListener.class
+nav\Navigation.class
+Listeners\AllureTestLifecycleListener.class
+setup\DriverManager.class
+pages\BookDemoPage.class
+pages\MainPage.class
+setup\DriverUtils.class

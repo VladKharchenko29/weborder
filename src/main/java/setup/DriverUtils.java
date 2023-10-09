@@ -1,7 +1,6 @@
 package setup;
 
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class DriverUtils {
 
@@ -9,6 +8,8 @@ public class DriverUtils {
         ChromeOptions options = new ChromeOptions();
 
         options.addArguments("start-maximized");
+        options.addArguments("--remote-allow-origins=*");
         return options;
     }
+
 }
